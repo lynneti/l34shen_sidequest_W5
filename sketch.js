@@ -197,10 +197,9 @@ function drawSymbol(x, y, kind, alpha, found) {
 }
 
 function drawVignette() {
-  // lightweight vignette: draw translucent rectangles around edges
   noStroke();
-  for (let i = 0; i < 30; i++) {
-    const a = map(i, 0, 29, 0, 70);
+  for (let i = 0; i < 24; i++) {
+    const a = map(i, 0, 23, 0, 12); // was 70 (too strong)
     fill(0, a);
     rect(i, i, width - i * 2, height - i * 2);
   }
