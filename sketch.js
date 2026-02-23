@@ -199,7 +199,7 @@ function drawSymbol(x, y, kind, alpha, found) {
 function drawVignette() {
   noStroke();
   for (let i = 0; i < 24; i++) {
-    const a = map(i, 0, 23, 0, 12); // was 70 (too strong)
+    const a = map(i, 0, 23, 12, 0); // outer rings darkest → proper edge vignette
     fill(0, a);
     rect(i, i, width - i * 2, height - i * 2);
   }
